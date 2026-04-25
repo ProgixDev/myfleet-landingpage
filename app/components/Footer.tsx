@@ -12,7 +12,11 @@ const footerLinks = {
     { label: "MyFleet Club", href: "/myfleet-club" },
     { label: "Contact", href: "/assistance" },
   ],
-  Legal: ["Confidentialite", "CGU", "Mentions"],
+  Legal: [
+    { label: "Confidentialite", href: "#" },
+    { label: "CGU", href: "#" },
+    { label: "Mentions", href: "#" },
+  ],
 };
 
 export function Footer() {
@@ -35,17 +39,11 @@ export function Footer() {
               <div className="space-y-6" key={group}>
                 <h5 className="text-black">{group}</h5>
                 <div className="flex flex-col gap-4 text-tertiary font-normal">
-                  {group === "Legal"
-                    ? links.map((link) => (
-                        <span className="hover:text-black transition-colors" key={link}>
-                          {link}
-                        </span>
-                      ))
-                    : (links as { label: string; href: string }[]).map((link) => (
-                        <Link className="hover:text-black transition-colors" href={link.href} key={link.label}>
-                          {link.label}
-                        </Link>
-                      ))}
+                  {(links as { label: string; href: string }[]).map((link) => (
+                    <Link className="hover:text-black transition-colors" href={link.href} key={link.label}>
+                      {link.label}
+                    </Link>
+                  ))}
                 </div>
               </div>
             ))}
