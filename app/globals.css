@@ -10,8 +10,8 @@
   --color-foreground: var(--foreground);
   --color-on-background: #0f0f0f;
   --color-tertiary: #1f2937;
-  --color-primary: #d7baff;
-  --color-primary-deep: #4a148c;
+  --color-primary: #6d28d9;
+  --color-primary-deep: #4c1d95;
   --color-surface: #ffffff;
   --radius-super: 2rem;
   --font-sans: var(--font-plus-jakarta);
@@ -21,6 +21,7 @@ body {
   background: var(--background);
   color: var(--color-on-background);
   font-family: var(--font-plus-jakarta), var(--font-inter), sans-serif;
+  font-weight: 700;
   overflow-x: hidden;
   zoom: 0.8;
 }
@@ -44,7 +45,7 @@ footer[id] {
 }
 
 ::selection {
-  background: #4a148c;
+  background: #4c1d95;
   color: #fff;
 }
 
@@ -83,6 +84,10 @@ footer[id] {
   -webkit-text-fill-color: transparent;
 }
 
+.text-primary {
+  font-weight: 700;
+}
+
 .letter-spacing-extra {
   letter-spacing: -0.02em;
 }
@@ -92,7 +97,7 @@ footer[id] {
 }
 
 .light-subtitle {
-  font-weight: 200;
+  font-weight: 700;
 }
 
 .iphone-frame {

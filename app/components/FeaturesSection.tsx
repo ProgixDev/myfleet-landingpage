@@ -1,7 +1,7 @@
 export function FeaturesSection() {
   const features = [
     {
-      icon: "https://lh3.googleusercontent.com/aida-public/AB6AXuBRbjRDF0Y3kQq-qRVIdjXP1GS75ALzxeKD_ABReEkrY-q89YrV6voOj3KmEiqyzBfciIMyPtQfZkCi8OZIDCjmqUhn7UCcJuznQXq5anC0sm9weuZSs_gLporNAZhL5QZjxjQhbwIbLy4bN7P7qfK8okxvr2Op3qyMZI3nzjICDFCJjfykAi78G00CHQxmHTStq8BXuHPuhzCbHfij07JzTlk0dl4-uDBzJ16Kgu1J61A-TjBVZWWg1jE9f8AnYDWjiIUDkVWO0Qaf",
+      icon: "/high_end_3d_isometric_icon_of_a_luxury_car_key_with_purple_glowing_accents-removebg-preview.png",
       label: "Réservation",
       title: "Contrôle total",
       desc: "Notre système intelligent vous garantit un accès instantané aux modèles les plus prisés, partout dans le monde.",
@@ -10,7 +10,7 @@ export function FeaturesSection() {
       delay: "0s",
     },
     {
-      icon: "https://lh3.googleusercontent.com/aida-public/AB6AXuDxoJDvL-Rsqszoaq8dbdb7Q4sbyA4z_XqfRONZF_VimncIDv_QxBlG832rGyRr7vuRMwVTJmTHg1Wwpu3-TZ7Gxea4fb-Y1w9hA1jAf0NVQDmfGNOQL9C3G58P69dj8TPK86NVt_BBO_Wo_odUnasql3LJc8K3EIrCmYtDoErtjv9MEO2wkcNfqG7fS6KtOjFXjkLgFngweZg1ffSespr2iBsZE6dbUaGxeaKY7gtnGnvfk9IA2Dn5qYXkCO9nLZQKzZlEBGQPrMi_",
+      icon: "/high_end_3d_isometric_icon_of_a_gold_and_purple_loyalty_card_glassmorphism-removebg-preview.png",
       label: "Fidélité",
       title: "Programme MyFleet",
       desc: "Accès prioritaire aux événements VIP, remises exclusives et avantages réservés à nos membres.",
@@ -19,7 +19,7 @@ export function FeaturesSection() {
       delay: "0.8s",
     },
     {
-      icon: "https://lh3.googleusercontent.com/aida-public/AB6AXuCJljKn8c07AD22wDGimMFNWW87BMCdz3xDO4r05crAZ8FJzbpzt0eEBBUXOpLWB9-v42c_Z1L2nHO3x0k3BEMHXGL95HPKByc6zotCGcJLhTc9ieR7qWPJNZV7-p3mx6MC6laJYB2Z7W5Vv-253J-6GvUGpzPnZ6gOiyLvsKeygOW6FHg3NfQxA1mH4pMwV3xaKfTjT99m8QnTY34DqVY9tTVJKXHcKAG-msGDnfSKKC_bAJRxr4NO64QHpebcL66v-7qw6Gku_SGN",
+      icon: "/high_end_3d_isometric_icon_of_a_secure_shield_with_a_lightning_bolt_deep_purple-removebg-preview.png",
       label: "Protection",
       title: "Sécurité absolue",
       desc: "Assurance tout-inclus et paiements sécurisés via notre protocole chiffré de bout en bout.",
@@ -61,7 +61,7 @@ export function FeaturesSection() {
                 <img
                   src={f.icon}
                   alt={f.label}
-                  className="w-28 h-28 float-animation relative z-10"
+                  className="w-36 h-36 md:w-40 md:h-40 float-animation relative z-10"
                   style={{ animationDelay: f.delay }}
                 />
               </div>
