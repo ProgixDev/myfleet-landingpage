@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="fr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>M - L'Excellence Automobile</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;400;600;800&amp;family=Inter:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-background": "#f8f8f8",
+                    "tertiary": "#a1a1aa",
+                    "primary": "#d7baff",
+                    "primary-deep": "#4A148C",
+                    "surface": "#0a0a0a",
+                    "background": "#050505",
+            },
+            "borderRadius": {
+                    "super": "2rem",
+            },
+            "fontFamily": {
+                    "sans": ["Plus Jakarta Sans", "Inter", "sans-serif"],
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        .float-animation { animation: float 6s ease-in-out infinite; }
+        
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        
+        .purple-glow {
+            position: absolute;
+            background: radial-gradient(circle, rgba(74, 20, 140, 0.4) 0%, rgba(74, 20, 140, 0) 70%);
+            width: 300px;
+            height: 300px;
+            z-index: -1;
+            filter: blur(40px);
+        }
+
+        .text-gradient {
+            background: linear-gradient(135deg, #fff 0%, #d7baff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+        .letter-spacing-extra { letter-spacing: -0.02em; }
+        .ultra-bold { font-weight: 800; }
+        .light-subtitle { font-weight: 200; }
+
+        /* Smartphone Mockup Styles */
+        .iphone-frame {
+            position: relative;
+            width: 280px;
+            height: 570px;
+            background: #1a1a1a;
+            border-radius: 3rem;
+            border: 8px solid #222;
+            box-shadow: 0 50px 100px -20px rgba(0,0,0,0.7), inset 0 0 15px rgba(255,255,255,0.05);
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+
+        .iphone-screen {
+            width: 100%;
+            height: 100%;
+            border-radius: 2.5rem;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .iphone-bezel {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 25px;
+            background: #222;
+            border-bottom-left-radius: 1rem;
+            border-bottom-right-radius: 1rem;
+            z-index: 10;
+        }
+
+        .iphone-reflection {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(105deg, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0) 50%);
+            pointer-events: none;
+            z-index: 5;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-sans overflow-x-hidden selection:bg-primary-deep selection:text-white">
+<nav class="fixed top-0 w-full z-[100] transition-all duration-500 bg-black/40 backdrop-blur-md border-b border-white/5">
+<div class="flex justify-between items-center max-w-7xl mx-auto px-8 h-24">
+<div class="flex items-center gap-3 group">
+<div class="w-10 h-10 bg-primary-deep rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+<span class="text-xl font-extrabold italic text-white">M</span>
+</div>
+<span class="text-xl font-bold tracking-widest uppercase">MyFleet</span>
+</div>
+<div class="hidden lg:flex items-center gap-12 text-[11px] uppercase tracking-[0.3em] font-semibold text-tertiary">
+<a class="hover:text-primary transition-colors" href="#">La Flotte</a>
+<a class="hover:text-primary transition-colors" href="#">Services</a>
+<a class="hover:text-primary transition-colors" href="#">MyFleet Club</a>
+<a class="hover:text-primary transition-colors" href="#">Assistance</a>
+</div>
+<button class="bg-white text-black px-10 py-3.5 rounded-full text-xs font-extrabold uppercase tracking-widest hover:bg-primary transition-all active:scale-95 shadow-lg shadow-white/5">
+            Réserver
+        </button>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-24">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background"></div>
+<div class="absolute inset-0 bg-black/40"></div>
+<img alt="Luxury black sports car background" class="w-full h-full object-cover scale-105 animate-[pulse_10s_ease-in-out_infinite]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4zgmPO49jQWj0zwkMwC2ocHrgOL0cHLJqAyQiRueWyJtcOeNjrWt9wTVVQQ29JsT4zbG-hhpbcTM-47019W1q-Ewy5KLHiWdXL8uHGiWrTfi04oq5DAoM62qFvD1KMTXSLvU7cNA5MN8eFVPoP-gfiVCwIa26-GSNdxjPA-7kE7ZF0A-oZKJfdmUGrhHv_4O2R_fmU43QlAFpzP6f3GhP2gyVB--kXqA-vTbKCdk_Vz3GwjCTPS5d5tb5_NWVg7SIlkdaC7Fzl_rb"/>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-6 text-center">
+<div class="inline-block mb-6 px-6 py-2 rounded-full border border-white/10 bg-white/5 backdrop-blur-sm">
+<span class="text-[10px] uppercase tracking-[0.4em] font-bold text-primary">Redéfinir le Prestige</span>
+</div>
+<h1 class="text-6xl md:text-8xl ultra-bold mb-8 letter-spacing-extra leading-[1.05]">
+                L'art de la route,<br/>
+<span class="text-gradient">sans compromis.</span>
+</h1>
+<p class="text-lg md:text-xl light-subtitle text-tertiary max-w-3xl mx-auto mb-14 leading-relaxed">
+                Accédez instantanément à la sélection automobile la plus exclusive au monde. <br class="hidden md:block"/>
+                Une expérience digitale fluide au service de vos trajets d'exception.
+            </p>
+<div class="flex flex-col sm:flex-row gap-6 justify-center items-center">
+<button class="w-full sm:w-auto bg-primary-deep text-white px-12 py-6 rounded-full text-sm font-bold uppercase tracking-widest hover:shadow-[0_0_40px_rgba(74,20,140,0.5)] transition-all">
+                    Découvrir la flotte
+                </button>
+<button class="w-full sm:w-auto border border-white/20 bg-white/5 backdrop-blur-md px-12 py-6 rounded-full text-sm font-bold uppercase tracking-widest hover:bg-white/10 transition-all">
+                    En savoir plus
+                </button>
+</div>
+</div>
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 opacity-50">
+<span class="text-[9px] uppercase tracking-[0.5em] font-bold">Scroll</span>
+<div class="w-[1px] h-12 bg-gradient-to-b from-white to-transparent"></div>
+</div>
+</section>
+<!-- Features Section / Bento -->
+<section class="max-w-7xl mx-auto px-6 py-40">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Large Main Feature -->
+<div class="md:col-span-2 glass-panel rounded-super p-12 relative overflow-hidden group">
+<div class="purple-glow -top-20 -left-20 opacity-40"></div>
+<div class="relative z-10">
+<img alt="3D Key Icon" class="w-32 h-32 mb-10 float-animation" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRbjRDF0Y3kQq-qRVIdjXP1GS75ALzxeKD_ABReEkrY-q89YrV6voOj3KmEiqyzBfciIMyPtQfZkCi8OZIDCjmqUhn7UCcJuznQXq5anC0sm9weuZSs_gLporNAZhL5QZjxjQhbwIbLy4bN7P7qfK8okxvr2Op3qyMZI3nzjICDFCJjfykAi78G00CHQxmHTStq8BXuHPuhzCbHfij07JzTlk0dl4-uDBzJ16Kgu1J61A-TjBVZWWg1jE9f8AnYDWjiIUDkVWO0Qaf"/>
+<h3 class="text-4xl ultra-bold mb-6">Contrôle Total</h3>
+<p class="text-tertiary light-subtitle text-lg max-w-md leading-relaxed">
+                        Prenez les commandes instantanément. Notre système de réservation intelligent vous garantit une disponibilité immédiate sur les modèles les plus prisés.
+                    </p>
+</div>
+<div class="absolute -bottom-10 -right-10 w-2/3 h-2/3 opacity-20 pointer-events-none transition-transform duration-1000 group-hover:scale-110">
+<img alt="Luxury car detail" class="w-full h-full object-cover rounded-tl-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCj5VVffmiMt7-GdG_IjJbcLUa1nJfMdhoYbg0424q0Cl0y8A1c6LHwE0JLF2jOGfgvn4xqI9n_wMioDZyh8Xd9Hm2DFwM5bZUR2rty0Rxce2lH8w5Y3JFXT5t7h4uUVjxpUbA9jkf5qbHU1uUxIGwsq0lLYv6fCg8whFBAbcCs_CQDxOeRSLAn2MN1vhqynmv_FVDdTVFC6tzEMqhNJyIpzwOLUB2FZmqhoj7zqvsJCAonkTUB8HzA673XcileNutmv0_npSkkTJy7"/>
+</div>
+</div>
+<!-- Small Feature 1 -->
+<div class="glass-panel rounded-super p-12 relative overflow-hidden group">
+<div class="purple-glow bottom-[-50px] right-[-50px] opacity-30"></div>
+<img alt="3D Loyalty Card" class="w-24 h-24 mb-10 float-animation" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxoJDvL-Rsqszoaq8dbdb7Q4sbyA4z_XqfRONZF_VimncIDv_QxBlG832rGyRr7vuRMwVTJmTHg1Wwpu3-TZ7Gxea4fb-Y1w9hA1jAf0NVQDmfGNOQL9C3G58P69dj8TPK86NVt_BBO_Wo_odUnasql3LJc8K3EIrCmYtDoErtjv9MEO2wkcNfqG7fS6KtOjFXjkLgFngweZg1ffSespr2iBsZE6dbUaGxeaKY7gtnGnvfk9IA2Dn5qYXkCO9nLZQKzZlEBGQPrMi_" style="animation-delay: 1s"/>
+<h3 class="text-2xl ultra-bold mb-4">Programme MyFleet</h3>
+<p class="text-tertiary text-sm leading-relaxed">
+                    Un univers de privilèges exclusifs, de l'accès prioritaire aux événements VIP.
+                </p>
+</div>
+<!-- Small Feature 2 -->
+<div class="glass-panel rounded-super p-12 relative overflow-hidden group">
+<div class="purple-glow top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-20"></div>
+<img alt="3D Shield Icon" class="w-24 h-24 mb-10 float-animation" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJljKn8c07AD22wDGimMFNWW87BMCdz3xDO4r05crAZ8FJzbpzt0eEBBUXOpLWB9-v42c_Z1L2nHO3x0k3BEMHXGL95HPKByc6zotCGcJLhTc9ieR7qWPJNZV7-p3mx6MC6laJYB2Z7W5Vv-253J-6GvUGpzPnZ6gOiyLvsKeygOW6FHg3NfQxA1mH4pMwV3xaKfTjT99m8QnTY34DqVY9tTVJKXHcKAG-msGDnfSKKC_bAJRxr4NO64QHpebcL66v-7qw6Gku_SGN" style="animation-delay: 2s"/>
+<h3 class="text-2xl ultra-bold mb-4">Sécurité Absolue</h3>
+<p class="text-tertiary text-sm leading-relaxed">
+                    Assurance tout-inclus et paiements ultra-sécurisés via notre protocole chiffré.
+                </p>
+</div>
+<!-- Horizontal Feature -->
+<div class="md:col-span-2 glass-panel rounded-super p-12 flex flex-col md:flex-row items-center gap-10">
+<div class="flex-1">
+<h3 class="text-3xl ultra-bold mb-6">Une expertise vérifiée</h3>
+<p class="text-tertiary light-subtitle text-lg leading-relaxed">
+                        Nos agences partenaires sont sélectionnées selon des critères d'excellence drastiques pour vous assurer une qualité de service constante partout dans le monde.
+                    </p>
+</div>
+<div class="flex -space-x-4">
+<div class="w-16 h-16 rounded-full border-4 border-background bg-zinc-800 flex items-center justify-center text-xs font-bold">VIP</div>
+<div class="w-16 h-16 rounded-full border-4 border-background bg-zinc-700 flex items-center justify-center text-xs font-bold">LUX</div>
+<div class="w-16 h-16 rounded-full border-4 border-background bg-zinc-600 flex items-center justify-center text-xs font-bold">+10k</div>
+</div>
+</div>
+</div>
+</section>
+<!-- App Showcase Section -->
+<section class="bg-[#080808] py-40 relative overflow-hidden">
+<div class="max-w-7xl mx-auto px-6">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+<div class="space-y-16">
+<div>
+<span class="text-xs uppercase tracking-[0.5em] font-bold text-primary mb-6 block">Technologie</span>
+<h2 class="text-5xl md:text-7xl ultra-bold letter-spacing-extra mb-8">Votre concierge <br/><span class="text-gradient">numérique.</span></h2>
+<p class="text-xl light-subtitle text-tertiary max-w-lg leading-relaxed">
+                            L'application MyFleet devient votre interface privilégiée. Réservations, historique, points de fidélité et conciergerie 24/7.
+                        </p>
+</div>
+<div class="space-y-10">
+<div class="flex gap-8 group">
+<div class="w-14 h-14 rounded-2xl glass-panel flex items-center justify-center shrink-0 group-hover:bg-primary-deep transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-white">auto_awesome</span>
+</div>
+<div>
+<h4 class="text-xl ultra-bold mb-2">Expérience Intuitive</h4>
+<p class="text-tertiary text-sm">Une interface pensée pour la rapidité et le plaisir d'utilisation.</p>
+</div>
+</div>
+<div class="flex gap-8 group">
+<div class="w-14 h-14 rounded-2xl glass-panel flex items-center justify-center shrink-0 group-hover:bg-primary-deep transition-colors">
+<span class="material-symbols-outlined text-primary group-hover:text-white">location_searching</span>
+</div>
+<div>
+<h4 class="text-xl ultra-bold mb-2">Géolocalisation Premium</h4>
+<p class="text-tertiary text-sm">Trouvez les modèles d'exception les plus proches de vous en temps réel.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- 3D Smartphone Mockups Stack -->
+<div class="relative min-h-[700px] flex items-center justify-center">
+<div class="absolute inset-0 bg-primary-deep/10 blur-[150px] rounded-full scale-110"></div>
+<!-- Back Phone (Right) -->
+<div class="absolute translate-x-24 translate-y-10 rotate-[12deg] scale-90 opacity-60 hover:opacity-100 hover:scale-95 transition-all duration-700 z-10 group">
+<div class="iphone-frame">
+<div class="iphone-bezel"></div>
+<div class="iphone-screen">
+<img alt="App Screen Scan" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0ujxjSX46YG7Pv0EmBx_l43cUhe7ONEnRomj86auGnqvMuGAumB3Kgddjo8oU3ZWKW56eNOHZPsfkcTjwyQ2JJfWT4uNGjZNEqhNZO7Rw4lbc8LmVA3E4TjHhtLqR0Lvo6k88ugVh0pypUkSQsQm16sUpjccFiKCTWizdFRta48JQHO_KFPeTwsHvq0TPOTm71bz0O8nHrLmv-OQMRY_K_ec3kZD14TbYRNf4_n2DdGRFBhLyInuIiIkxfsWk6aU-AlFm1TYSI-RUuU"/>
+<div class="iphone-reflection"></div>
+</div>
+</div>
+</div>
+<!-- Middle Phone (Left) -->
+<div class="absolute -translate-x-24 translate-y-20 -rotate-[12deg] scale-90 opacity-60 hover:opacity-100 hover:scale-95 transition-all duration-700 z-10">
+<div class="iphone-frame">
+<div class="iphone-bezel"></div>
+<div class="iphone-screen">
+<img alt="App Screen Onboarding" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0ujHnhZLEqoee23NPDWoIBiIbWKcbEozDrzYBarc4JBZI_etGb_n0ouZ6EiqUAQ7oEND7aw37zDoCJ7yxTD2UwYmyEry_SRYGJqNV4AuMHTA0DEY4cHSP15lYSnp7zmXE5p_8YtSTmUpZkAz3VbCZasbYc3rUH2RiAuUqnxsluDV6MaIxu-pkQ909QjxodJuooCqBp-qMemWtVK43LYUaV5z5cZs_hEx4gra12I7JtV1u1g1iKiSzq-B9mUA539KvxYzvwJ2lUIPiYo"/>
+<div class="iphone-reflection"></div>
+</div>
+</div>
+</div>
+<!-- Center Primary Phone -->
+<div class="relative z-30 transition-transform duration-700 hover:scale-[1.02] cursor-pointer">
+<div class="iphone-frame border-zinc-800/50">
+<div class="iphone-bezel"></div>
+<div class="iphone-screen">
+<img alt="App Screen Profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/ADBb0uihLNU86uvZd9XVg8NRFtXv_MEc2flW3Dmky3GvAkLTK-eQo0SLzbmJBDjcGcAQGCw0MEcmtojqnzEqFHa_NWUitIKmb_qjBRA6zpCw5d6Ms7PLULL1ySYJboymKL65KXRDV0WqksN--DsySBKbncc55tabzhJlbUk3JG9qoXcU1dDGBoEY9yOcOvOtWNRUXrGKlEqWTJ9f2XbcuxkixS5gKZRx6q8_f0I6TsBD_IwSbfBP14iXOxCxN-a2oLzRw02wTCYXV8nYEu4"/>
+<div class="iphone-reflection"></div>
+</div>
+</div>
+<!-- Extra glow for central phone -->
+<div class="absolute -inset-10 bg-primary-deep/30 blur-[80px] -z-10 rounded-full opacity-0 hover:opacity-100 transition-opacity"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Call to Action -->
+<section class="py-40 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
+<div class="max-w-7xl mx-auto px-6">
+<div class="glass-panel rounded-super p-16 md:p-24 flex flex-col lg:flex-row items-center justify-between gap-16 border-white/5 relative">
+<div class="purple-glow top-0 right-0 opacity-20"></div>
+<div class="max-w-2xl">
+<h2 class="text-5xl md:text-6xl ultra-bold mb-8 letter-spacing-extra">L'excellence vous <br/>attend.</h2>
+<p class="text-xl light-subtitle text-tertiary mb-12">
+                        Téléchargez l'application et rejoignez le club le plus exclusif de l'automobile de luxe. Scannez le code pour un accès immédiat.
+                    </p>
+<div class="flex flex-wrap gap-6">
+<img alt="App Store" class="h-12 hover:scale-105 transition-transform cursor-pointer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3u89A88elQ7-oUxkq2t3JzPF4najsjfg3JFGaVX2vh5VaJIJ-hunXR9ttcLryJ04KneA8-LYXYnwfwtbfLA786lpwXcmLzNE_6_yqOLQzGcXFeRoSXcARHHeJiXVTxDbQU9ruHAHDem6MkzfoTOqEpUm1UNmqb1M0LClRaWapNustfVNtVX_1BWt3KjiDPC9OBPhwys95nwW_Gsnb99T73pEhB6f5mRr5xXl67w2mN9u3UTvKYm8T8Sn-QZpcqDSZoFINFVZ7hkUd"/>
+<img alt="Play Store" class="h-12 hover:scale-105 transition-transform cursor-pointer" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkD_P7WXyNg8zMKrEloTKdlgLKYyysImX5NBpiPAm0HVdwk2QSb2uWU-hSayanWvExFOqsAW2YGMQ4LhdrDcwoQ1DOmmPzdvhtZzVC1fsIQiTXkKRfqvzYnKbeke7lkGhRxGLrnWyxyGJ0ptrFoGtoi57JhsEYVg_FeAZTWTWyMauOUADO0kL4Jg8_TXf7EgydJbaUGJ4nUaFbvgsKZXV7F4je5TNvsz_39rJtEmPga1xs8ja_2_dXj2scDyQVJTvVScCO1PufMdXx"/>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute inset-0 bg-primary-deep/40 blur-[40px] group-hover:bg-primary/20 transition-colors"></div>
+<div class="relative bg-white p-8 rounded-super shadow-2xl scale-110">
+<img alt="QR Reservation" class="w-40 h-40" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOYipB6M82c5qdTF6C6vPkvE7bQVHwebNU9phEm3MpbDWvEariLYNDZwQ9-YZD2Ki6beU81hdN7yBz6Cpn41YDSW9arFvQNzqqg3klSrkmrxECR6dNQFoU19Lg5-hqgkLg-m2pXvOx3tbzAZ96iA4ZCbCJ71d5jybWYQSB3R9HUKHsa8B0_vwuukkinGU0Gokv4PVyMcwvXhE8VPb_ZPjGCguvtmuHAWiZLh4xv0JfXTb1zkWjsR57sBLl8zn5NWnPLwek6ccFAsrt"/>
+<p class="text-black text-[10px] font-extrabold uppercase tracking-[0.3em] text-center mt-6">Scan to Reserve</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-black border-t border-white/5 py-24">
+<div class="max-w-7xl mx-auto px-8">
+<div class="flex flex-col md:flex-row justify-between items-start gap-16 mb-20">
+<div class="space-y-6">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
+<span class="text-xl font-extrabold italic text-black">M</span>
+</div>
+<span class="text-2xl font-bold tracking-tighter uppercase">MyFleet</span>
+</div>
+<p class="text-tertiary max-w-sm text-sm light-subtitle leading-relaxed">
+                    L'excellence en mouvement. Le service de location de prestige numéro 1 pour les conducteurs les plus exigeants.
+                </p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-12 text-[11px] uppercase tracking-widest font-bold">
+<div class="space-y-6">
+<h5 class="text-white">Services</h5>
+<div class="flex flex-col gap-4 text-tertiary font-normal">
+<a class="hover:text-white transition-colors" href="#">La Flotte</a>
+<a class="hover:text-white transition-colors" href="#">Entreprises</a>
+<a class="hover:text-white transition-colors" href="#">Événementiel</a>
+</div>
+</div>
+<div class="space-y-6">
+<h5 class="text-white">Compagnie</h5>
+<div class="flex flex-col gap-4 text-tertiary font-normal">
+<a class="hover:text-white transition-colors" href="#">À propos</a>
+<a class="hover:text-white transition-colors" href="#">Partenaires</a>
+<a class="hover:text-white transition-colors" href="#">Contact</a>
+</div>
+</div>
+<div class="space-y-6">
+<h5 class="text-white">Légal</h5>
+<div class="flex flex-col gap-4 text-tertiary font-normal">
+<a class="hover:text-white transition-colors" href="#">Confidentialité</a>
+<a class="hover:text-white transition-colors" href="#">CGU</a>
+<a class="hover:text-white transition-colors" href="#">Mentions</a>
+</div>
+</div>
+</div>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-center gap-8 pt-10 border-t border-white/5">
+<p class="text-[10px] text-tertiary uppercase tracking-widest">© 2024 MyFleet - L'Excellence Automobile.</p>
+<div class="flex gap-6">
+<a class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-white hover:text-black transition-all" href="#">
+<span class="material-symbols-outlined text-sm">share</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-white hover:text-black transition-all" href="#">
+<span class="material-symbols-outlined text-sm">alternate_email</span>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</body></html>
