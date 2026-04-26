@@ -2,27 +2,27 @@ export function FeaturesSection() {
   const features = [
     {
       icon: "/high_end_3d_isometric_icon_of_a_luxury_car_key_with_purple_glowing_accents-removebg-preview.png",
-      label: "Réservation",
-      title: "Contrôle total",
-      desc: "Notre système intelligent vous garantit un accès instantané aux modèles les plus prisés, partout dans le monde.",
-      stat: "10k+",
-      statLabel: "Véhicules",
+      label: "CRM intégré",
+      title: "Pilotez votre flotte",
+      desc: "Gérez véhicules, contrats, réservations et paiements depuis une interface unique pensée pour les agences.",
+      stat: "100%",
+      statLabel: "Centralisé",
       delay: "0s",
     },
     {
       icon: "/high_end_3d_isometric_icon_of_a_gold_and_purple_loyalty_card_glassmorphism-removebg-preview.png",
-      label: "Fidélité",
-      title: "Programme MyFleet",
-      desc: "Accès prioritaire aux événements VIP, remises exclusives et avantages réservés à nos membres.",
-      stat: "VIP",
-      statLabel: "Accès",
+      label: "App client",
+      title: "Offrez l'expérience digitale",
+      desc: "Donnez à vos clients une application moderne pour réserver, consulter leurs locations et payer en quelques secondes.",
+      stat: "24/7",
+      statLabel: "Disponible",
       delay: "0.8s",
     },
     {
       icon: "/high_end_3d_isometric_icon_of_a_secure_shield_with_a_lightning_bolt_deep_purple-removebg-preview.png",
-      label: "Protection",
-      title: "Sécurité absolue",
-      desc: "Assurance tout-inclus et paiements sécurisés via notre protocole chiffré de bout en bout.",
+      label: "Données sécurisées",
+      title: "Infrastructure fiable",
+      desc: "Hébergement chiffré, sauvegardes automatiques et conformité RGPD pour protéger vos données et celles de vos clients.",
       stat: "256",
       statLabel: "Bit SSL",
       delay: "1.6s",
@@ -30,21 +30,35 @@ export function FeaturesSection() {
   ];
 
   return (
-    <section className="py-40 px-6 overflow-hidden" id="features">
+    <section className="relative py-40 px-6 overflow-hidden" id="features">
+      {/* Gemmes décoratives */}
+      <img
+        src="/minimalist_floating_purple_crystal_fragment_simple_geometric_shape_soft-removebg-preview.png"
+        alt=""
+        className="gem-decoration gem-soft gem-float hidden md:block"
+        style={{ top: "8%", right: "8%", width: "110px", animationDelay: "0.3s" }}
+      />
+      <img
+        src="/minimalist_floating_purple_crystal_fragment_simple_geometric_shape_soft-removebg-preview.png"
+        alt=""
+        className="gem-decoration gem-soft gem-float hidden md:block"
+        style={{ bottom: "20%", left: "4%", width: "85px", animationDelay: "1.8s" }}
+      />
+
       <div className="max-w-7xl mx-auto">
 
         {/* Header — même style que AppShowcaseSection */}
         <div className="text-center mb-24">
           <span className="text-xs uppercase tracking-[0.5em] font-bold text-primary mb-6 block">
-            Pourquoi nous choisir
+            Pensé pour les agences
           </span>
           <h2 className="text-5xl md:text-7xl ultra-bold letter-spacing-extra mb-6">
-            L&apos;excellence
+            Tout pour gérer
             <br />
-            <span className="text-gradient">à portée de main.</span>
+            <span className="text-gradient">votre business.</span>
           </h2>
           <p className="text-xl light-subtitle text-tertiary max-w-xl mx-auto leading-relaxed">
-            Trois piliers qui font la différence entre une location ordinaire et une expérience d&apos;exception.
+            Trois briques qui transforment la gestion quotidienne de votre agence en avantage concurrentiel.
           </p>
         </div>
 
@@ -98,19 +112,19 @@ export function FeaturesSection() {
         <div className="mt-20 border border-black/8 rounded-2xl px-14 py-10 flex flex-col md:flex-row items-center justify-between gap-6">
           <div className="max-w-lg">
             <span className="text-[10px] uppercase tracking-[0.4em] font-semibold text-primary mb-3 block">
-              Réseau partenaires
+              Adopté par les pros
             </span>
             <h4 className="text-2xl ultra-bold letter-spacing-extra mb-2">
-              Une expertise vérifiée et certifiée
+              Une plateforme conçue avec les agences
             </h4>
             <p className="light-subtitle text-tertiary text-sm leading-relaxed">
-              Nos agences sont sélectionnées selon des critères d&apos;excellence pour vous garantir une qualité constante, où que vous soyez dans le monde.
+              MyFleet est développé en collaboration avec des agences de location pour répondre aux vrais enjeux du métier : rapidité, fiabilité et expérience client.
             </p>
           </div>
           <div className="text-center shrink-0">
-            <p className="text-6xl ultra-bold letter-spacing-extra text-gradient">+10k</p>
+            <p className="text-6xl ultra-bold letter-spacing-extra text-gradient">+200</p>
             <p className="text-[10px] uppercase tracking-[0.3em] text-black/30 font-medium mt-1">
-              Agences mondiales
+              Agences équipées
             </p>
           </div>
         </div>

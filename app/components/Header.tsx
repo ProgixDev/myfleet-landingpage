@@ -10,23 +10,23 @@ export function Header() {
           <span className="text-xl font-bold tracking-widest uppercase">MyFleet</span>
         </Link>
 
-        <div className="hidden lg:flex items-center gap-12 text-[11px] uppercase tracking-[0.3em] font-bold text-tertiary">
-          <Link className="hover:text-primary transition-colors" href="/#flotte">
-            La Flotte
+        <div className="hidden lg:flex items-center gap-10 text-sm uppercase tracking-[0.18em] font-black text-black">
+          <Link className="hover:text-primary transition-colors" href="/#features">
+            Fonctionnalités
           </Link>
           <Link className="hover:text-primary transition-colors" href="/#services">
-            Services
+            Plateforme
           </Link>
-          <Link className="hover:text-primary transition-colors" href="/#myfleet-club">
-            MyFleet Club
+          <Link className="hover:text-primary transition-colors" href="/#how-it-works">
+            Étapes
           </Link>
-          <Link className="hover:text-primary transition-colors" href="/#assistance">
-            Assistance
+          <Link className="hover:text-primary transition-colors" href="/#faq">
+            FAQ
           </Link>
         </div>
 
         <Link className="bg-black text-white px-10 py-3.5 rounded-full text-xs font-extrabold uppercase tracking-widest hover:bg-zinc-800 transition-all active:scale-95 shadow-lg shadow-black/10" href="/reservation">
-          Reserver
+          Demander une démo
         </Link>
       </div>
     </nav>

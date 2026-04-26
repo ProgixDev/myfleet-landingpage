@@ -1,13 +1,13 @@
 const appHighlights = [
   {
-    title: "Experience Intuitive",
-    text: "Une interface pensee pour la rapidite et le plaisir d'utilisation.",
-    icon: "AI",
+    title: "Tableau de bord agence",
+    text: "Suivez vos réservations, vos revenus et l'état de votre flotte en temps réel depuis votre mobile.",
+    icon: "CRM",
   },
   {
-    title: "Geolocalisation Premium",
-    text: "Trouvez les modeles d'exception les plus proches de vous en temps reel.",
-    icon: "GPS",
+    title: "Application client en marque blanche",
+    text: "Offrez à vos clients une app fluide pour réserver, payer et accéder à leur véhicule en quelques tapotements.",
+    icon: "APP",
   },
 ];
 
@@ -49,19 +49,33 @@ function PhoneMockup({ alt, src, className, main = false }: { alt: string; src: 
 
 export function AppShowcaseSection() {
   return (
-    <section className="bg-background py-40 relative overflow-hidden" id="services">
+    <section className="py-40 relative overflow-hidden" id="services">
+      {/* Gemmes décoratives */}
+      <img
+        src="/minimalist_floating_purple_crystal_fragment_simple_geometric_shape_soft-removebg-preview.png"
+        alt=""
+        className="gem-decoration gem-soft gem-float hidden md:block"
+        style={{ top: "15%", left: "6%", width: "95px", animationDelay: "0.8s" }}
+      />
+      <img
+        src="/minimalist_floating_purple_crystal_fragment_simple_geometric_shape_soft-removebg-preview.png"
+        alt=""
+        className="gem-decoration gem-soft gem-float hidden md:block"
+        style={{ bottom: "10%", right: "5%", width: "75px", animationDelay: "2.5s" }}
+      />
+
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
           <div className="space-y-16">
             <div>
-              <span className="text-xs uppercase tracking-[0.5em] font-bold text-primary mb-6 block">Technologie</span>
+              <span className="text-xs uppercase tracking-[0.5em] font-bold text-primary mb-6 block">Plateforme</span>
               <h2 className="text-5xl md:text-7xl ultra-bold letter-spacing-extra mb-8">
-                Votre concierge
+                Une plateforme,
                 <br />
-                <span className="text-gradient">numerique.</span>
+                <span className="text-gradient">deux applications.</span>
               </h2>
               <p className="text-xl light-subtitle text-tertiary max-w-lg leading-relaxed">
-                L&apos;application MyFleet devient votre interface privilegiee. Reservations, historique, points de fidelite et conciergerie 24/7.
+                MyFleet, c&apos;est un CRM pour piloter votre agence et une app pour vos clients — connectés en temps réel, synchronisés en permanence.
               </p>
             </div>
 

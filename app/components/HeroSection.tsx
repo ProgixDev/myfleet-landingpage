@@ -16,72 +16,82 @@ export function HeroSection() {
 
   return (
     <section
-      className="relative flex flex-col items-center justify-center overflow-hidden pt-36 pb-0"
+      className="relative w-full min-h-screen flex items-center justify-center overflow-hidden"
       id="accueil"
     >
-      {/* Glow background */}
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-[#4a148c]/10 blur-[120px] rounded-full pointer-events-none" />
+      {/* Vidéo full bleed */}
+      <video
+        ref={videoRef}
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="auto"
+        className="absolute inset-0 w-full h-full object-cover z-0"
+      >
+        <source src="/video.mp4" type="video/mp4" />
+      </video>
 
-      {/* Texte centré */}
-      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
+      {/* Overlays pour lisibilité du texte */}
+      <div className="absolute inset-0 z-10 bg-gradient-to-b from-black/55 via-black/35 to-black/75 pointer-events-none" />
+      <div className="absolute inset-0 z-10 bg-[#4c1d95]/15 mix-blend-multiply pointer-events-none" />
+      <div className="absolute inset-0 z-10 bg-gradient-to-t from-background via-transparent to-transparent pointer-events-none" />
 
+      {/* Gemmes décoratives */}
+      <img
+        src="/minimalist_floating_purple_crystal_fragment_simple_geometric_shape_soft-removebg-preview.png"
+        alt=""
+        className="gem-decoration gem-float hidden md:block"
+        style={{ top: "18%", left: "8%", width: "120px", animationDelay: "0s" }}
+      />
+      <img
+        src="/minimalist_floating_purple_crystal_fragment_simple_geometric_shape_soft-removebg-preview.png"
+        alt=""
+        className="gem-decoration gem-float hidden md:block"
+        style={{ top: "55%", right: "10%", width: "90px", animationDelay: "2s" }}
+      />
+      <img
+        src="/minimalist_floating_purple_crystal_fragment_simple_geometric_shape_soft-removebg-preview.png"
+        alt=""
+        className="gem-decoration gem-soft gem-float hidden lg:block"
+        style={{ top: "30%", right: "22%", width: "70px", animationDelay: "1.2s" }}
+      />
+
+      {/* Contenu central */}
+      <div className="relative z-20 max-w-5xl mx-auto px-6 text-center text-white pt-32 pb-24">
         <h1 className="text-6xl md:text-8xl ultra-bold letter-spacing-extra leading-[1.04] mb-7">
-          L&apos;art de la route,
+          Votre flotte. Vos clients.
           <br />
-          <span className="text-gradient">sans compromis.</span>
+          <span className="text-gradient-light">Une plateforme.</span>
         </h1>
 
-        <p className="text-lg md:text-xl light-subtitle text-[#4b5563] max-w-2xl mx-auto mb-12 leading-relaxed">
-          Accédez instantanément à la sélection automobile la plus exclusive au monde.
-          Une expérience digitale fluide au service de vos trajets d&apos;exception.
+        <p className="text-lg md:text-xl light-subtitle text-white/80 max-w-2xl mx-auto mb-12 leading-relaxed">
+          MyFleet équipe les agences de location d&apos;un CRM intelligent et d&apos;une application
+          pour piloter leur flotte, leurs clients et leur business — depuis une seule plateforme.
         </p>
 
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-20">
+        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <Link
-            href="/flotte"
-            className="w-full sm:w-auto bg-black text-white px-10 py-4 rounded-full text-sm font-semibold uppercase tracking-widest hover:bg-[#4a148c] transition-colors duration-300"
+            href="/reservation"
+            className="w-full sm:w-auto bg-white text-black px-10 py-4 rounded-full text-sm font-semibold uppercase tracking-widest hover:bg-[#c4b5fd] transition-colors duration-300"
           >
-            Découvrir la flotte
+            Demander une démo
           </Link>
           <Link
             href="/#services"
-            className="w-full sm:w-auto border border-black/20 text-black/70 px-10 py-4 rounded-full text-sm font-semibold uppercase tracking-widest hover:border-black/50 hover:text-black transition-colors duration-300"
+            className="w-full sm:w-auto border border-white/40 text-white/90 px-10 py-4 rounded-full text-sm font-semibold uppercase tracking-widest hover:border-white hover:bg-white/10 transition-colors duration-300 backdrop-blur-sm"
           >
-            En savoir plus
+            Découvrir la plateforme
           </Link>
         </div>
       </div>
 
-      {/* Mockup téléphone avec vidéo */}
-      <div className="relative z-10 flex justify-center">
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-72 h-32 bg-[#4a148c]/15 blur-[60px] rounded-full" />
+  
 
-        <div className="iphone-frame">
-          <div className="iphone-bezel" />
-          <div className="iphone-screen">
-            <video
-              ref={videoRef}
-              autoPlay
-              loop
-              muted
-              playsInline
-              preload="auto"
-              className="w-full h-full object-cover"
-              poster="https://lh3.googleusercontent.com/aida-public/AB6AXuA4zgmPO49jQWj0zwkMwC2ocHrgOL0cHLJqAyQiRueWyJtcOeNjrWt9wTVVQQ29JsT4zbG-hhpbcTM-47019W1q-Ewy5KLHiWdXL8uHGiWrTfi04oq5DAoM62qFvD1KMTXSLvU7cNA5MN8eFVPoP-gfiVCwIa26-GSNdxjPA-7kE7ZF0A-oZKJfdmUGrhHv_4O2R_fmU43QlAFpzP6f3GhP2gyVB--kXqA-vTbKCdk_Vz3GwjCTPS5d5tb5_NWVg7SIlkdaC7Fzl_rb"
-            >
-              <source
-                src="/A_cinematic_luxury_car_driving_slowly_on_a_modern_city_street_during_daytime.__The_car_looks_elegant_seed2618698133.mp4"
-                type="video/mp4"
-              />
-            </video>
-            <div className="iphone-reflection" />
-          </div>
-        </div>
-      </div>
-
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-30">
-        <span className="text-[9px] uppercase tracking-[0.5em] font-semibold">Scroll</span>
-        <div className="w-px h-10 bg-gradient-to-b from-black to-transparent" />
+      {/* Indicateur scroll */}
+      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 flex flex-col items-center gap-2 opacity-60">
+        <span className="text-[9px] uppercase tracking-[0.5em] font-semibold text-white">Scroll</span>
+        <div className="w-px h-10 bg-gradient-to-b from-white to-transparent" />
       </div>
     </section>
   );

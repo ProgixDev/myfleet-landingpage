@@ -15,8 +15,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "MyFleet - Landing Page",
-  description: "Landing page MyFleet convertie depuis code.html en composants Next.js",
+  title: "MyFleet — Le SaaS des agences de location automobile",
+  description:
+    "MyFleet équipe les agences de location d'un CRM intelligent et d'une application client en marque blanche. Pilotez votre flotte, vos clients et vos revenus depuis une seule plateforme.",
 };
 
 export default function RootLayout({
