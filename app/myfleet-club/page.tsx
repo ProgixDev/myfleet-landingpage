@@ -1,4 +1,12 @@
+import type { Metadata } from "next";
 import { InternalPage } from "../components/InternalPage";
+
+export const metadata: Metadata = {
+  title: "MyFleet Club",
+  description:
+    "Rejoignez le programme partenaires MyFleet Club et accédez à des avantages exclusifs réservés aux agences de location membres.",
+  alternates: { canonical: "/myfleet-club" },
+};
 
 export default function MyFleetClubPage() {
   return (

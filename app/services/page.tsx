@@ -1,4 +1,12 @@
+import type { Metadata } from "next";
 import { InternalPage } from "../components/InternalPage";
+
+export const metadata: Metadata = {
+  title: "Fonctionnalités",
+  description:
+    "Découvrez les fonctionnalités de MyFleet : CRM intelligent, application client en marque blanche et outils de pilotage pour les agences de location.",
+  alternates: { canonical: "/services" },
+};
 
 export default function ServicesPage() {
   return (
