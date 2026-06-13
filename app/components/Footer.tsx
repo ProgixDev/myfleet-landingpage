@@ -13,9 +13,10 @@ const footerLinks = {
     { label: "Support", href: "/assistance" },
   ],
   Legal: [
-    { label: "Confidentialité", href: "#" },
-    { label: "CGU", href: "#" },
-    { label: "Mentions", href: "#" },
+    { label: "Mentions", href: "/mentions-legales" },
+    { label: "Confidentialité", href: "/confidentialite" },
+    { label: "CGU", href: "/cgu" },
+    { label: "Cookies", href: "/cookies" },
   ],
 };
 
