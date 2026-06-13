@@ -11,6 +11,10 @@ const navLinks = [
   { href: "/#faq", label: "FAQ" },
 ];
 
+// The agency back-office is a separate Vercel project served on its own
+// subdomain (see deployment docs). Keep this as the single source of truth.
+const BACKOFFICE_URL = "https://backoffice.myfleetagency.com";
+
 export function Header() {
   const [open, setOpen] = useState(false);
 
@@ -42,9 +46,17 @@ export function Header() {
             ))}
           </div>
 
-          <Link className="hidden lg:inline-block bg-black text-white px-10 py-3.5 rounded-full text-xs font-extrabold uppercase tracking-widest hover:bg-zinc-800 transition-all active:scale-95 shadow-lg shadow-black/10" href="/reservation">
-            Demander une démo
-          </Link>
+          <div className="hidden lg:flex items-center gap-4">
+            <a
+              className="text-xs font-extrabold uppercase tracking-widest text-black/70 hover:text-primary transition-colors px-4 py-3.5"
+              href={BACKOFFICE_URL}
+            >
+              Espace agence
+            </a>
+            <Link className="inline-block bg-black text-white px-10 py-3.5 rounded-full text-xs font-extrabold uppercase tracking-widest hover:bg-zinc-800 transition-all active:scale-95 shadow-lg shadow-black/10" href="/reservation">
+              Demander une démo
+            </Link>
+          </div>
 
           {/* Hamburger mobile */}
           <button
@@ -122,6 +134,13 @@ export function Header() {
               >
                 Demander une démo
               </Link>
+              <a
+                href={BACKOFFICE_URL}
+                onClick={() => setOpen(false)}
+                className="border border-black/15 text-black px-8 py-4 rounded-full text-xs font-extrabold uppercase tracking-widest text-center hover:border-black/40 transition-colors"
+              >
+                Espace agence
+              </a>
               <p className="text-[10px] uppercase tracking-[0.3em] text-black/40 text-center font-bold">
                 Le SaaS des agences de location
               </p>
