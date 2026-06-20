@@ -1,3 +1,4 @@
+import { AgencyAccessSection } from "./components/AgencyAccessSection";
 import { AppShowcaseSection } from "./components/AppShowcaseSection";
 import { CtaSection } from "./components/CtaSection";
 import { FaqSection } from "./components/FaqSection";
@@ -21,6 +22,7 @@ export default function Home() {
         <FeaturesSection />
         <AppShowcaseSection />
         <HowItWorksSection />
+        <AgencyAccessSection />
         <FaqSection />
         <CtaSection />
       </main>

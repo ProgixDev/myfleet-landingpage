@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { BACKOFFICE_URL } from "../lib/site";
 
 const navLinks = [
   { href: "/#features", label: "Fonctionnalités" },
@@ -10,10 +11,6 @@ const navLinks = [
   { href: "/#how-it-works", label: "Étapes" },
   { href: "/#faq", label: "FAQ" },
 ];
-
-// The agency back-office is a separate Vercel project served on its own
-// subdomain (see deployment docs). Keep this as the single source of truth.
-const BACKOFFICE_URL = "https://backoffice.myfleetagency.com";
 
 export function Header() {
   const [open, setOpen] = useState(false);
