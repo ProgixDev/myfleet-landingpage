@@ -2,6 +2,12 @@ export const SITE_URL = "https://myfleetagency.com";
 export const SITE_NAME = "MyFleet";
 
 /**
+ * The agency back-office (web-admin) — a separate Vercel project on its own
+ * subdomain. Single source of truth for every "Espace agence" link on the site.
+ */
+export const BACKOFFICE_URL = "https://backoffice.myfleetagency.com";
+
+/**
  * Full default title used by the home page and as the metadata template base.
  * Kept in sync with the layout's `title.default`.
  */
